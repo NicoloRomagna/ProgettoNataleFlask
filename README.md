@@ -32,12 +32,16 @@ ProgettoNataleFlask
 │
 └── templates
 │────── base.html
+│ 
 ├── auth
 │────── login.html
 │────── register.html
+│ 
 │── main
 │──────index.html
 │──────create_night.html
+│ 
 │── dashboard
 │────── stats.html
-        
+
+
