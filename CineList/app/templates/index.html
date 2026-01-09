@@ -1,0 +1,25 @@
+<!-- app/templates/index.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home - Blog{% endblock %}
+
+{% block content %}
+    <h2>Benvenuti!</h2>
+    <p>Questo è il sito ufficiale del mio archivio di Film</p>
+    
+    <h3>Film Visti:</h3>
+    <ul>
+        <!-- Ciclo sull'array film_visti che mi arriva da main.py  -->
+    {% for film in filmv %}
+        <li>{{ film }}</li>
+    {% endfor %}
+    </ul>
+
+    <h3>Film Da vedere:</h3>
+    <ul>
+    <!-- Ciclo sull'array film_da_vedere che mi arriva da main.py  -->
+    {% for film in filmdavedere %}
+        <li>{{ film }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CineList</title>
+</head>
+<body>
+    <!--
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/create">Crea serata</a> |
+        <a href="/dashboard">Dashboard</a> |
+        <a href="/auth/login">Login</a> |
+        <a href="/auth/register">Register</a> |
+        <a href="/auth/logout">Logout</a>
+    </nav>
+-->
+    <!-- Dentro il <body>, prima del blocco content -->
+
+    <nav>
+        <a href="{{ url_for('main.index') }}">Home</a> |
+        <a href="{{ url_for('main.about') }}">Chi Sono</a> |
+        <a href="{{ url_for('main.creafilm') }}">Crea Film</a> |
+    <!-- LOGICA DINAMICA DELLA NAVBAR -->
+    {% if g.user %}
+        <!-- Se g.user esiste, l'utente è loggato -->
+        <span>Ciao, {{ g.user['username'] }}</span>
+        <a href="{{ url_for('auth.logout') }}">Logout</a>
+    {% else %}
+        <!-- Altrimenti mostriamo i tasti di accesso -->
+        <a href="{{ url_for('auth.register') }}">Registrati</a>
+        <a href="{{ url_for('auth.login') }}">Login</a>
+    {% endif %}
+    </nav>
+
+    <hr>
+
+    <!-- Zona Messaggi Flash -->
+    {% for message in get_flashed_messages() %}
+        <div class="flash" style="color: red; border: 1px solid red; padding: 10px;">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
