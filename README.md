@@ -1,5 +1,4 @@
 # ProgettoNataleFlask
-
 ## BoardBuddy
 BoardBuddy è una web app realizzata con Flask.
 Gli utenti possono registrarsi e organizzare serate di gioco da tavolo.
