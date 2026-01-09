@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Crea nuova serata</h2>
+<form method="POST">
+    <input name="title" placeholder="Titolo">
+    <input name="date" type="date">
+    <input name="location" placeholder="Luogo">
+    <textarea name="notes" placeholder="Note"></textarea>
+    <button>Crea</button>
+</form>
+{% endblock %}
