@@ -1,47 +1,36 @@
 # ProgettoNataleFlask
-## BoardBuddy
-BoardBuddy è una web app realizzata con Flask.
-Gli utenti possono registrarsi e organizzare serate di gioco da tavolo.
+## CineList
+CineList è una web app realizzata con Flask.
+Gli utenti possono registrarsi e visualizzare i film visti o meno dalla coomunity.
 
 ### Funzionalità
 - Registrazione e login utenti
-- Creazione di serate con titolo, data, luogo e note
-- Lista di tutte le serate create
-- Dashboard con il totale delle serate create dall’utente
+- Creazione di film
+- Lista di film visti e no
+- Dashboard con i film visti e non visti
 
 ### Struttura del progetto
 ProgettoNataleFlask
-│
+| CineList
 ├── run.py
-├── boardbuddy
+|── setup_db.py
+|── app
+│────── repositories
+│──────────── film_repository.py
+│──────────── user_repository.py
+│────── templates
+│──────────── auth
+│────────────────── login.html
+│────────────────── register.html
+│──────────── about.html
+│──────────── base.html
+│──────────── creafilm.html
+│──────────── index.html
 │────── __init__.py
-│────── config.py
-│────── models.py
-│   
-│── auth
-│────── __init__.py
-│────── routes.py
-│  
-│── main
-│────── __init__.py
-│──────routes.py
-│   
-│── dashboard
-│────── __init__.py
-│────── routes.py
-│
-└── templates
-│────── base.html
-│ 
-├── auth
-│────── login.html
-│────── register.html
-│ 
-│── main
-│──────index.html
-│──────create_night.html
-│ 
-│── dashboard
-│────── stats.html
-
+│────── auth.py
+│────── db.py
+│────── main.py
+│────── schema.sql
+|── instance
+│────── film.sqlite
 
