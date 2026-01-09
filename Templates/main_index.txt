@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-<h2>Serate di gioco</h2>
-<ul>
-{% for n in nights %}
-    <li>{{ n.title }} – {{ n.date }} – {{ n.location }}</li>
-{% endfor %}
-</ul>
-{% endblock %}
