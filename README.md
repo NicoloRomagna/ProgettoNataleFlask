@@ -34,3 +34,4 @@ ProgettoNataleFlask
 |── instance
 │────── film.sqlite
 
+-  link per aprire il Browser --> http://127.0.0.1:5000/
